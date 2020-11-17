@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import ReactDOM from "react-dom";
+import React from 'react';
 import QRCode from "react-qr-code";
+import './QRcodeRender.css';
 
 const QRcodeRender = (props)=> {
 
       return(
       <>
-      <render>
-      <QRCode bgColor="transparent" value={props.url} size="100"/>
-      </render>
+      <section className="render">
+      <QRCode bgColor="transparent" value={props.url} size={100}/>
+      
+      </section>
     </>
       );
   }

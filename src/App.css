@@ -4,7 +4,6 @@
 
 .App-logo {
   height: 40vmin;
-  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -18,8 +17,39 @@ header {
 section {
   margin-bottom: 6vh;
 }
+a {
+  color: rgb(0, 0, 141);
+}
+.qrCode_img {
+  height: 15vh;
+}
+.how_to {
+  flex-direction: column;
+  display: flex;
+  text-align: left;
+  justify-content: center;
+}
+.how_to li {
+  margin-bottom: 0px;
+  font-size: calc(10px+1.5vmin);
+}
+.render {
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+}
+.render-col {
+  flex-direction: column;
+}
+
+.intro-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .url_input {
-  width: 30vmax;
+  width: 50vmax;
+  text-align: center;
   background-color: transparent;
   border: 0px;
   border-bottom: 2px solid rgb(29, 29, 29);
@@ -38,10 +68,6 @@ section {
   /*justify-content: center;*/
   font-size: calc(10px + 2vmin);
   color: rgb(29, 29, 29);
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
