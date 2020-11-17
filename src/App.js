@@ -22,8 +22,9 @@ const App = ()=> {
     <>
     <div className="App">
       <main className="App-header">
+        <header>
         <h1>Github Repo News is come to your Kakao</h1>
-        
+        </header>
         <h3>Let Me Know Your Repository News</h3>
         <section>
           <form>
@@ -36,7 +37,7 @@ const App = ()=> {
         
         <QRcodeRender url={qrcodeLink}/>
        
-    <div><p>{url}</p></div>
+    
     </main>
     </div>
   </>

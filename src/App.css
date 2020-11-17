@@ -12,7 +12,12 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+header {
+  margin-bottom: 10vh;
+}
+section {
+  margin-bottom: 6vh;
+}
 .url_input {
   width: 30vmax;
   background-color: transparent;
