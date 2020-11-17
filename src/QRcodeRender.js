@@ -7,7 +7,7 @@ const QRcodeRender = (props)=> {
       return(
       <>
       <render>
-      <QRCode bgColor="transparent" value={props.url} />
+      <QRCode bgColor="transparent" value={props.url} size="100"/>
       </render>
     </>
       );
