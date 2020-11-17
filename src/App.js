@@ -1,6 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import QRcodeRender from './QRcodeRender'
 import React, { useState, useEffect } from 'react';
+
+/** 
+ * https://github.com/유저이름/레포이름
+ * 주소 형식이 위와 같아야함.
+*/
 
 const App = ()=> {
 
@@ -10,21 +16,28 @@ const App = ()=> {
     setUrl(e.target.value);
   };
   const generate = e =>{
-
+    setQrcodeLink(url);
   }
     return(
     <>
     <div className="App">
-      <header className="App-header">
-        <h1>Github Favorties Repo is come to your Kakao</h1>
-        </header>
-        <h1>Let Me Know Your Repository News</h1>
-       <form>
-         <input type="text" vlaue={url} onChange={onChangeUrl} id="url" name="url-form"/>
-         <button type="button" onClick={generate}>GENERATE!</button>
-       </form>
+      <main className="App-header">
+        <h1>Github Repo News is come to your Kakao</h1>
+        
+        <h3>Let Me Know Your Repository News</h3>
+        <section>
+          <form>
+            <label for="url_input">
+            </label>
+          <input placeholder="https://github.com/user/repository" type="text" vlaue={url} onChange={onChangeUrl} class ="url_input"id="url_input" name="url-form"/>
+          <button type="button" onClick={generate}>GENERATE!</button>
+        </form>
+        </section>
+        
+        <QRcodeRender url={qrcodeLink}/>
+       
     <div><p>{url}</p></div>
-     
+    </main>
     </div>
   </>
     );
