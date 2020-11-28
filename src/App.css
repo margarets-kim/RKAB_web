@@ -12,13 +12,27 @@
   }
 }
 header {
-  margin-bottom: 10vh;
+  margin-top: 100px;
 }
+header img {
+  width: 212px;
+}
+
 section {
   margin-bottom: 6vh;
 }
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
 a {
-  color: rgb(0, 0, 141);
+  color: rgb(44, 44, 44);
 }
 .qrCode_img {
   height: 15vh;
@@ -48,7 +62,7 @@ a {
   align-items: center;
 }
 .url_input {
-  width: 50vmax;
+  width: 70%;
   text-align: center;
   background-color: transparent;
   border: 0px;
@@ -65,7 +79,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*justify-content: center;*/
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: rgb(29, 29, 29);
 }

@@ -1,0 +1,49 @@
+.main_card {
+  background-color: white;
+  width: 60vw;
+  height: 35vh;
+  max-width: 700px;
+  min-width: 375px;
+  border-radius: 5px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+.main_card p {
+  margin-bottom: 30px;
+}
+button,
+input {
+  -webkit-appearance: none;
+}
+button {
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+button:focus {
+  border: none;
+}
+.card-bottom {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.btn {
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+}
+.prev {
+  background-color: lightblue;
+}
+.next {
+  background-color: #f83838;
+}
