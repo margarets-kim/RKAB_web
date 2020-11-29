@@ -40,7 +40,7 @@ function setInput(){
         <h4>{props.info.owner}의<br/> {props.info.name}</h4>
       <p>Created At {date.toISOString(props.info.created_at).substring(0, 10)}</p>
       <p>Updated At {date.toISOString(props.info.updated_at).substring(0, 10)}</p>
-      <div className="detail"><span><FontAwesomeIcon icon={faStar} size="xs" color="#a8a8a8"/><p>{props.info.stargazers_count}</p></span><p>|</p><span><FontAwesomeIcon icon={faCodeBranch} size="xs"   color="#a8a8a8"/> <p> {props.info.forks}</p></span></div>
+      <div className="detail"><span><FontAwesomeIcon icon={faStar} size="xs" color="#a8a8a8"/><p>{props.info.stargazers_count}</p></span> <span><FontAwesomeIcon icon={faCodeBranch} size="xs"   color="#a8a8a8"/> <p> {props.info.forks}</p></span></div>
         </div>
        
       <div className='repo-info'><h5>별명</h5>

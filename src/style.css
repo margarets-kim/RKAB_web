@@ -177,7 +177,7 @@ input {
   flex-direction: row;
   align-items: center;
   height: 100%;
-  padding-left: 7vw;
+  justify-content: center;
 }
 .repo-info {
   justify-content: space-between;
