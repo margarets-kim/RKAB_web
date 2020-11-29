@@ -8,34 +8,18 @@ const CardRegister = (props)=> {
   const [url, setUrl] = useState('');
   const [page, setPage] = useState(props.page);
   const [error,setError]=useState(false);
-  const fetchData = async (info) => {
-    fetch("/api/info/?id="+info.id+"&repo="+info.repo,{
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      }
-    })
-      .then((response) => response.json())
-      .then((result) => {
-        props.getInfo(result);
-        
-      })
-    }
   const onChangeUrl = e => {
     setUrl(e.target.value);
     setError(false);
   };
   const generate = e =>{
-    const isGithubUrl = new RegExp(/(http(s)?:\/\/)(github\.com\/)+([a-z0-9-_\.]*)(\/)+([a-z0-9-_\.]*)/i);
-    
+    const isGithubUrl =/(http(s)?:\/\/?)(github\.com)(\/)([a-z0-9-]+\/)([a-z0-9-]+)/i;
     //console.log(url.length);
+   
     if(isGithubUrl.test(url)){
-      const result = {url : isGithubUrl.exec(url)[0],id : isGithubUrl.exec(url)[4], repo: isGithubUrl.exec(url)[6]};
-      
-      console.log(result);
+      //console.log('its github url');
       //setQrcodeLink(url);
-      
-      fetchData(result);
+      next(url)
     }else{
       setError(true);
       console.log('its not github');
@@ -62,7 +46,7 @@ function prev(e) {
           <form className='url_form'>
             <label htmlFor="url_input">
             </label>
-            <div className="input_guide kakao"><FontAwesomeIcon icon={faGithub} size="1x" /></div>
+            <div className="input_guide telegram"><FontAwesomeIcon icon={faGithub} size="1x" /></div>
             <input placeholder="https://github.com/username/repository" type="text" vlaue={url} onChange={onChangeUrl} className ="url_input"id="url_input" name="url-form"/>
           
         </form>
@@ -70,12 +54,12 @@ function prev(e) {
         </div>
 
         <div className="card-bottom">
-        <button onClick={generate} className={(url?'active kakao':'none')}>
+        <button onClick={generate} className={(url?'active telegram':'none')}>
 
 Next
 
 </button>
-<button onClick={prev} className=" prev">
+<button onClick={prev} className="btn prev">
 
 Back
 

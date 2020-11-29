@@ -1,0 +1,133 @@
+button {
+  width: 80px;
+  height: 35px;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  border-radius: 5px;
+  outline: none;
+  text-align: center;
+  display: inline-block;
+  border: none;
+  font-size: calc(7px + 1vmin);
+  color: #5f5f5f;
+  border: 1px solid #dddddd;
+  /*box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);*/
+}
+@media screen and (max-width: 400px) {
+  button {
+    width: 60px;
+    height: 25px;
+  }
+}
+button:focus {
+  border: none;
+}
+.main_card {
+  background-color: white;
+  width: 60vw;
+  height: 35vh;
+  max-width: 700px;
+  min-width: 375px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+.main_card p {
+  margin-bottom: 30px;
+}
+.intro-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.input_guide {
+  width: 10%;
+  min-width: 45px;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: 1px solid #e2e2e2;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.url_form {
+  display: flex;
+  min-width: 240px;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  flex-direction: row;
+  height: 30px;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+.url_input {
+  width: 90%;
+  height: 100%;
+  border: none;
+  text-align: left;
+  background-color: transparent;
+
+  font-size: calc(10px + 1vmin);
+  outline: none;
+}
+.url_input:focus {
+  outline: none;
+}
+button,
+input {
+  -webkit-appearance: none;
+}
+
+.view {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-intro,
+.card-register {
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.card-bottom {
+  display: flex;
+  height: 20%;
+  padding: 0 10px;
+  min-height: 52px;
+  border-top: 1px solid #ececec;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  align-items: center;
+}
+.none {
+  background-color: rgb(255, 255, 255);
+  cursor: not-allowed;
+}
+.error-txt {
+  color: red;
+}
+.hidden {
+  visibility: hidden;
+}
+.show {
+  visibility: visible;
+}
+.active {
+  font-weight: bold;
+  color: #141414;
+}
+.telegram {
+  background-color: #1db3ee;
+}
+.kakao {
+  background-color: #ffe760;
+}

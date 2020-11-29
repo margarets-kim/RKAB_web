@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import channel from '../image/QRcode_channel_2.png';
+import channel from '../image/qrcode_telegram.png';
 
 
 const CardIntro = (props)=> {
@@ -11,7 +11,7 @@ const CardIntro = (props)=> {
       <>
       <div className='view'>
       <div className='card-intro'>
-        <h4>시작하려면 <a target="_blank" href="http://pf.kakao.com/_chxcXK" rel="noreferrer">깃허벨 채널</a>을 추가하고 서비스를 이용하세요!</h4>
+        <h4>시작하려면 <a target="_blank" href="https://t.me/Githubell_bot" rel="noreferrer">깃허벨 봇</a>을 추가하고 서비스를 이용하세요!</h4>
         
         </div>
         <div className="render">
@@ -21,20 +21,19 @@ const CardIntro = (props)=> {
          
         <div className="how_to">
         <ol>
-            <li>깃허벨 카카오톡 채널을 추가하세요(@깃허벨)</li>
-            <li>'다음'을 눌러 원하는 깃허브 레포지토리 url을 넣으세요</li>
-            <li>생성된 QR코드를 찍는다</li>
-            <li>등록 완료!</li>
+            <li>텔레그램에서 봇을 추가합니다(@githubell_bot)</li>
+            <li>하단의 '시작'을 누르세요</li>
+            <li>준비 완료!</li>
         </ol>
       </div>
       
         </div>
         </div>
         <div className="card-bottom">
-      <button className="active kakao" onClick={next}>
+        <button className="active telegram" onClick={next}>
        
-          Next
-        </button>
+        Next
+     </button>
         </div>
     </>
       );

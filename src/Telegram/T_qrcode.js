@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Card.css';
+
 
 const CardQrcode = (props)=> {
 
@@ -9,17 +9,13 @@ function prev(e) {
 }
       return(
       <>
-       <div className='view'>
-        <img src={props.info.avatar_url} alt="profile"/>
-
-       </div>
+      <div className='view'></div>
       <div className="card-bottom">
       
-        <button onClick={prev}>
-        <div className="btn prev">
-          <p>Back</p>
-        </div>
-        </button>
+      <button className="btn prev" onClick={prev}>
+       
+      Back
+     </button>
         </div>
     </>
       );

@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "apple-gothic";
+  src: url("./font/AppleSDGothicNeoM.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "apple-gothic";
+  src: url("./font/AppleSDGothicNeoEB.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
 .App {
   text-align: center;
 }
@@ -12,10 +24,11 @@
   }
 }
 header {
-  margin-top: 100px;
+  margin-top: 10vw;
 }
 header img {
-  width: 212px;
+  width: 40vw;
+  max-width: 240px;
 }
 
 section {
@@ -29,10 +42,31 @@ h4,
 h5,
 h6,
 p {
+  font-family: "apple-gothic";
   margin: 0;
+  word-break: keep-all;
 }
 a {
   color: rgb(44, 44, 44);
+}
+.contents {
+  width: 60vw;
+  height: 50vh;
+  max-width: 700px;
+  min-width: 300px;
+}
+.main-view {
+  background-color: white;
+  height: 70%;
+  position: relative;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+.main-view p {
+  margin-bottom: 30px;
 }
 .qrCode_img {
   height: 15vh;
@@ -55,23 +89,39 @@ a {
 .render-col {
   flex-direction: column;
 }
-
-.intro-text {
+.tab-bar {
   display: flex;
-  flex-direction: row;
+  font-size: 15pt;
+  height: 50px;
+}
+.tab-bar a {
+  width: 30%;
+  min-width: 150px;
+}
+.tab-select {
+  background-color: white;
+}
+.tab-none {
+  background-color: #ffe760;
+}
+.tab {
+  box-shadow: 0 -3px 30px rgba(0, 0, 0, 0.12);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 100%;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
-.url_input {
-  width: 70%;
-  text-align: center;
-  background-color: transparent;
-  border: 0px;
-  border-bottom: 2px solid rgb(29, 29, 29);
-  font-size: calc(10px + 2vmin);
-  outline: none;
+.tab p {
+  font-size: 0.8em;
 }
-.url_input:focus {
-  outline: none;
+.tab img {
+  height: 50%;
+  margin-right: 10px;
 }
 .App-header {
   background-color: #ffe760;
@@ -80,7 +130,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 1vmin);
   color: rgb(29, 29, 29);
 }
 
