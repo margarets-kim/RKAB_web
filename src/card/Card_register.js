@@ -9,7 +9,7 @@ const CardRegister = (props)=> {
   const [page, setPage] = useState(props.page);
   const [error,setError]=useState(false);
   const fetchData = async (info) => {
-    fetch("http://margarets.pythonanywhere.com/api/info/?id="+info.id+"&repo="+info.repo,{
+    fetch("https://margarets.pythonanywhere.com/api/info/?id="+info.id+"&repo="+info.repo,{
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
