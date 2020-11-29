@@ -10,6 +10,9 @@
   font-weight: bold;
   font-style: normal;
 }
+body {
+  font-family: "apple-gothic";
+}
 .App {
   text-align: center;
 }
@@ -24,7 +27,7 @@
   }
 }
 header {
-  margin-top: 10vw;
+  margin-top: 7vw;
 }
 header img {
   width: 40vw;
@@ -41,7 +44,9 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+li,
+ol {
   font-family: "apple-gothic";
   margin: 0;
   word-break: keep-all;
@@ -50,7 +55,7 @@ a {
   color: rgb(44, 44, 44);
 }
 .contents {
-  width: 60vw;
+  width: 70vw;
   height: 50vh;
   max-width: 700px;
   min-width: 300px;
@@ -79,7 +84,7 @@ a {
 }
 .how_to li {
   margin-bottom: 0px;
-  font-size: calc(10px+1.5vmin);
+  font-size: calc(10px+1vmin);
 }
 .render {
   flex-direction: row;
