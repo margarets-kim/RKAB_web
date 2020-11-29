@@ -135,21 +135,47 @@ input {
 .card-branch {
   text-align: center;
   width: 70%;
-  margin: 20px auto;
+  margin: 20px auto 10px auto;
 }
 .profile {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+  text-align: center;
+  padding-right: 10px;
   align-items: center;
+  height: 70%;
+  border-right: 1px solid #eaeaea;
 }
 .profile img {
-  width: 70px;
-  border-radius: 50px;
+  width: 40px;
+  margin-bottom: 10px;
+}
+.profile p {
+  font-size: 9pt;
+  margin: 0;
+  text-align: left;
+  color: gray;
+}
+.detail {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+  justify-content: space-around;
+}
+.detail p {
+  margin-left: 3px;
+}
+.detail span {
+  display: inline-flex;
 }
 .view-repo {
   display: flex;
   flex-direction: row;
-  align-items: start;
+  align-items: center;
   height: 100%;
   padding-left: 7vw;
 }
@@ -171,6 +197,16 @@ input {
   border-radius: 5px;
 }
 .branch :focus {
+  border: none;
+  outline: none;
+}
+.alias-input {
+  border: 1px solid #e2e2e2;
+  height: 35px;
+  width: 30vw;
+  border-radius: 5px;
+}
+.alias-input :focus {
   border: none;
   outline: none;
 }
