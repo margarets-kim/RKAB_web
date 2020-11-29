@@ -18,22 +18,14 @@ function prev(e) {
       <h3>아래 QR코드를 카카오톡 깃허벨 챗에게 전달하세요</h3>
       
       </div>
-       <div className='view-repo'>
-
-         <div className="profile">
+       <div className='view'>
          <QRcodeRender url={JSON.stringify(result)}/>
-        </div>
        
-      <div className='repo-info'><h5>별명 : {props.info.alias}</h5>
+       
      
-      <div className="branch-list">
-      <h5>branch : {props.info.branch}</h5>
-        
-      </div>
-      </div>
       </div>
       <div className="card-bottom">
-        <button onClick={prev} className="prev">Go main</button>
+        <button onClick={prev} className="prev active kakao">Main</button>
         </div>
     </>
       );
