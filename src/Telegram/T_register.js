@@ -13,13 +13,14 @@ const CardRegister = (props)=> {
     setError(false);
   };
   const generate = e =>{
-    const isGithubUrl =/(http(s)?:\/\/?)(github\.com)(\/)([a-z0-9-]+\/)([a-z0-9-]+)/i;
-    //console.log(url.length);
-   
+    const isGithubUrl = new RegExp(/(http(s)?:\/\/)(github\.com\/)+([a-z0-9-_\.]*)(\/)+([a-z0-9-_\.]*)/i);
+    
+  //  console.log(url.length);
     if(isGithubUrl.test(url)){
-      //console.log('its github url');
-      //setQrcodeLink(url);
-      next(url)
+    
+      const result = {url : isGithubUrl.exec(url)[0],id : isGithubUrl.exec(url)[4], repo: isGithubUrl.exec(url)[6]};
+      console.log(result);
+      setQrcodeLink(result.url);
     }else{
       setError(true);
       console.log('its not github');
@@ -40,7 +41,7 @@ function prev(e) {
         <h4>소식을 받고 싶은 깃허브 레포지토리 주소를 입력하세요!</h4>
         
         </div>
-        {qrcodeLink===url&&
+        {qrcodeLink&&
           <QRcodeRender url={qrcodeLink}/>
         }
           <form className='url_form'>
@@ -55,7 +56,7 @@ function prev(e) {
 
         <div className="card-bottom">
         <button onClick={generate} className={(url?'active telegram':'none')}>
-
+        
 Next
 
 </button>
