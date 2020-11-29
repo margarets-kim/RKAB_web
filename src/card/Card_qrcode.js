@@ -17,7 +17,7 @@ function next(e) {
 }
 function setAliasF(e) {
   // Here, we invoke the callback with the new value
-  setAlias(e)
+  setAlias(e.target.value)
 }
 function setBranchF(e){
   setBranch(e.target.value);
