@@ -11,6 +11,7 @@ const CardRegister = (props)=> {
   const fetchData = async (info) => {
     fetch("/api/info/?id="+info.id+"&repo="+info.repo,{
       method: 'GET',
+      "Access-Control-Allow-Origin": "*",
       headers: {
         'Content-Type': 'application/json',
       }
