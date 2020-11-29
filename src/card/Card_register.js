@@ -8,19 +8,17 @@ const CardRegister = (props)=> {
   const [url, setUrl] = useState('');
   const [page, setPage] = useState(props.page);
   const [error,setError]=useState(false);
+  
   const fetchData = async (info) => {
-    fetch("/api/info/?id="+info.id+"&repo="+info.repo,{
-      method: 'GET',
-      "Access-Control-Allow-Origin": "*",
-      headers: {
-        'Content-Type': 'application/json',
-      }
-    })
-      .then((response) => response.json())
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+    targetUrl = "https://margarets.pythonanywhere.com/api/info/?id="+info.id+"&repo="+info.repo;
+    fetch(proxyUrl+targetUrl)
+    .then(blob => blob.json())
       .then((result) => {
         props.getInfo(result);
-        
-      }).catch(()=>{
+        console.log(result);
+      }).catch((e)=>{
+        console.log(e);
         setError(true);
       })
     }

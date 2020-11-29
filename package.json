@@ -2,8 +2,7 @@
   "name": "repo_alarm_web",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://margarets.pythonanywhere.com",
-  "homepage": "https://githubell.netlify.app",
+  "proxy": "https://margarets.pythonanywhere.com",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
