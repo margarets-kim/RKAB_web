@@ -5,7 +5,7 @@ module.exports = function (app) {
     "/api",
     createProxyMiddleware({
       // proxy할 주소, 즉, 백단의 주소를 적어줍니다.
-      target: "http://margarets.pythonanywhere.com",
+      target: "https://margarets.pythonanywhere.com",
       changeOrigin: true,
     })
   );
