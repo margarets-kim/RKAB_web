@@ -44,7 +44,7 @@ function setInput(){
         </div>
        
       <div className='repo-info'><h5>별명</h5>
-      <input type="text" placeholder="별명을 설정해주세요(공란으로 둘 경우 레포 이름으로 설정)" onChange={setAliasF} className="alias-input"/>
+      <input type="text" placeholder="특수문자 제외, 공란은 레포지토리 이름으로 저장됩니다" onChange={setAliasF} className="alias-input"/>
       <div className="branch-list">
         <h5>branch</h5>
         <select className="branch" name="dd" onChange={setBranchF}>

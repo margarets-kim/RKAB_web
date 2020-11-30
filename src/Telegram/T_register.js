@@ -3,11 +3,25 @@ import QRcodeRender from '../QRcodeRender';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {faGithub} from "@fortawesome/free-brands-svg-icons"
 
-const CardRegister = (props)=> {
+const TRegister = (props)=> {
   const [qrcodeLink, setQrcodeLink] = useState(null);
   const [url, setUrl] = useState('');
   const [page, setPage] = useState(props.page);
   const [error,setError]=useState(false);
+  
+  const fetchData = async (info) => {
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+    targetUrl = "https://margarets.pythonanywhere.com/api/info/?id="+info.id+"&repo="+info.repo;
+    fetch(proxyUrl+targetUrl)
+    .then(blob => blob.json())
+      .then((result) => {
+        props.getInfo(result);
+        console.log(result);
+      }).catch((e)=>{
+        console.log(e);
+        setError(true);
+      })
+    }
   const onChangeUrl = e => {
     setUrl(e.target.value);
     setError(false);
@@ -15,12 +29,14 @@ const CardRegister = (props)=> {
   const generate = e =>{
     const isGithubUrl = new RegExp(/(http(s)?:\/\/)(github\.com\/)+([a-z0-9-_\.]*)(\/)+([a-z0-9-_\.]*)/i);
     
-  //  console.log(url.length);
+    //console.log(url.length);
     if(isGithubUrl.test(url)){
-    
       const result = {url : isGithubUrl.exec(url)[0],id : isGithubUrl.exec(url)[4], repo: isGithubUrl.exec(url)[6]};
+      
       console.log(result);
-      setQrcodeLink(result.url);
+      //setQrcodeLink(url);
+      
+      fetchData(result);
     }else{
       setError(true);
       console.log('its not github');
@@ -41,13 +57,13 @@ function prev(e) {
         <h4>소식을 받고 싶은 깃허브 레포지토리 주소를 입력하세요!</h4>
         
         </div>
-        {qrcodeLink&&
+        {qrcodeLink===url&&
           <QRcodeRender url={qrcodeLink}/>
         }
           <form className='url_form'>
             <label htmlFor="url_input">
             </label>
-            <div className="input_guide telegram"><FontAwesomeIcon icon={faGithub} size="1x" /></div>
+            <div className="input_guide kakao"><FontAwesomeIcon icon={faGithub} size="1x" /></div>
             <input placeholder="https://github.com/username/repository" type="text" vlaue={url} onChange={onChangeUrl} className ="url_input"id="url_input" name="url-form"/>
           
         </form>
@@ -55,12 +71,12 @@ function prev(e) {
         </div>
 
         <div className="card-bottom">
-        <button onClick={generate} className={(url?'active telegram':'none')}>
-        
+        <button onClick={generate} className={(url?'active kakao':'none')}>
+
 Next
 
 </button>
-<button onClick={prev} className="btn prev">
+<button onClick={prev} className=" prev">
 
 Back
 
@@ -71,4 +87,4 @@ Back
   
 }
   
-  export default CardRegister;
+  export default TRegister;

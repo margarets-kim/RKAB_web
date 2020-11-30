@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import QRcodeRender from '../QRcodeRender';
-const CardResult = (props)=> {
+const TResult = (props)=> {
 
     const result = {
         url : props.info.url,
         alias : escape(props.info.alias),
         branch: props.info.branch,
-        type : 'kakao'
+        type : 'telegram'
     }
  console.log(JSON.stringify(result));
 function prev(e) {
@@ -15,7 +15,7 @@ function prev(e) {
 }
       return(
       <><div className='card-branch'>
-      <h3>아래 QR코드를 카카오톡 깃허벨 챗에게 전달하세요</h3>
+      <h3>아래 QR코드를 텔레그램 깃허벨 챗에게 전달하세요</h3>
       
       </div>
        <div className='view'>
@@ -25,10 +25,10 @@ function prev(e) {
      
       </div>
       <div className="card-bottom">
-        <button onClick={prev} className="prev active kakao">Main</button>
+        <button onClick={prev} className="prev active telegram">Main</button>
         </div>
     </>
       );
   }
   
-  export default CardResult;
+  export default TResult;
