@@ -4,7 +4,7 @@ const CardResult = (props)=> {
 
     const result = {
         url : props.info.url,
-        alias : escape(props.info.alias),
+        alias : encodeURI(props.info.alias),
         branch: props.info.branch,
         type : 'kakao'
     }

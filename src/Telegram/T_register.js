@@ -63,7 +63,7 @@ function prev(e) {
           <form className='url_form'>
             <label htmlFor="url_input">
             </label>
-            <div className="input_guide kakao"><FontAwesomeIcon icon={faGithub} size="1x" /></div>
+            <div className="input_guide telegram"><FontAwesomeIcon icon={faGithub} size="1x" /></div>
             <input placeholder="https://github.com/username/repository" type="text" vlaue={url} onChange={onChangeUrl} className ="url_input"id="url_input" name="url-form"/>
           
         </form>
@@ -71,7 +71,7 @@ function prev(e) {
         </div>
 
         <div className="card-bottom">
-        <button onClick={generate} className={(url?'active kakao':'none')}>
+        <button onClick={generate} className={(url?'active telegram':'none')}>
 
 Next
 
