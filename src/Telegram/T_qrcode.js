@@ -5,7 +5,7 @@ import {faStar,faCodeBranch} from "@fortawesome/free-solid-svg-icons"
 const CardQrcode = (props)=> {
   const [alias,setAlias]=useState(props.info.name)
   const [branch,setBranch]=useState(props.info.branch_lists[0])
-  var date = new Date();
+
 function prev(e) {
   // Here, we invoke the callback with the new value
   props.onChange(props.page-1);
@@ -37,8 +37,8 @@ function setInput(){
          <div className="profile">
         <img src={props.info.avatar_url} alt="profile"/>
         <h4>{props.info.owner}의<br/> {props.info.name}</h4>
-      <p>Created At {date.toISOString(props.info.created_at).substring(0, 10)}</p>
-      <p>Updated At {date.toISOString(props.info.updated_at).substring(0, 10)}</p>
+      <p>Created At {(props.info.created_at).split("T")[0]}</p>
+      <p>Updated At {(props.info.updated_at).split("T")[0]}</p>
       <div className="detail"><span><FontAwesomeIcon icon={faStar} size="xs" color="#a8a8a8"/><p>{props.info.stargazers_count}</p></span> <span><FontAwesomeIcon icon={faCodeBranch} size="xs"   color="#a8a8a8"/> <p> {props.info.forks}</p></span></div>
         </div>
        
@@ -54,7 +54,7 @@ function setInput(){
       </div>
       </div>
       <div className="card-bottom">
-        <button onClick={setInput} className="next kakao active">Next</button>
+        <button onClick={setInput} className="next telegram active">Next</button>
         <button onClick={prev} className="prev">Back</button>
         </div>
     </>
