@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {faStar,faCodeBranch} from "@fortawesome/free-solid-svg-icons"
+const { Octokit } = require("@octokit/rest");
+const octokit = new Octokit();
 
 const CardQrcode = (props)=> {
   const [alias,setAlias]=useState(props.info.name)
@@ -14,22 +16,30 @@ function next(e) {
   // Here, we invoke the callback with the new value
   props.onChange(props.page+1);
 }
-function setAliasF(e) {
-  // Here, we invoke the callback with the new value
-  setAlias(e.target.value)
-}
-function setBranchF(e){
-  setBranch(e.target.value);
-  
-}
+
 function setInput(){
-  props.getInput({alias:alias,branch:branch,url:'https://github.com/'+props.info.owner+'/'+props.info.name,type:'kakao'});
-  
-  next();
+  getRepo(props.info.owner,props.info.name).then((res)=>{
+    console.log(res);
+    props.getInput({id:res.data.id,type:'telegram'})
+    //next();
+  }
+  );
+    
+}
+async function getRepo(owner,repo) {
+  try{
+    return await octokit.repos.get({
+      owner,
+      repo,
+    })
+  }
+  catch (error){
+    console.log(error);
+  }
 }
       return(
       <><div className='card-branch'>
-      <h3>레포지토리의 브랜치를 선택하고 별명을 입력해주세요</h3>
+      <h3>레포지토리를 확인하고 다음을눌러주세요</h3>
       
       </div>
        <div className='view-repo'>
@@ -42,19 +52,9 @@ function setInput(){
       <div className="detail"><span><FontAwesomeIcon icon={faStar} size="xs" color="#a8a8a8"/><p>{props.info.stargazers_count}</p></span> <span><FontAwesomeIcon icon={faCodeBranch} size="xs"   color="#a8a8a8"/> <p> {props.info.forks}</p></span></div>
         </div>
        
-      <div className='repo-info'><h5>별명</h5>
-      <input type="text" placeholder="특수문자 제외, 공란은 레포지토리 이름으로 저장됩니다" onChange={setAliasF} className="alias-input"/>
-      <div className="branch-list">
-        <h5>branch</h5>
-        <select className="branch" name="dd" onChange={setBranchF}>
-        {props.info.branch_lists.map(branch => (
-          <option value={branch}>{branch}</option>))}
-          </select>
-      </div>
-      </div>
       </div>
       <div className="card-bottom">
-        <button onClick={setInput} className="next telegram active">Next</button>
+        <button onClick={()=>{setInput()}} className="next telegram active">Next</button>
         <button onClick={prev} className="prev">Back</button>
         </div>
     </>

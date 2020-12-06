@@ -146,6 +146,8 @@ input {
   padding-right: 10px;
   align-items: center;
   height: 70%;
+}
+.left-line {
   border-right: 1px solid #eaeaea;
 }
 .profile img {

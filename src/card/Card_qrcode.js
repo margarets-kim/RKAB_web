@@ -35,7 +35,7 @@ function setInput(){
       </div>
        <div className='view-repo'>
 
-         <div className="profile">
+         <div className="profile left-line">
         <img src={props.info.avatar_url} alt="profile"/>
         <h4>{props.info.owner}의<br/> {props.info.name}</h4>
       <p>Created At {(props.info.created_at).substring(0, 10)}</p>

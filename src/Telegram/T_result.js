@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import QRcodeRender from '../QRcodeRender';
+
 const TResult = (props)=> {
 
     const result = {
-        url : props.info.url,
-        alias : encodeURI(props.info.alias),
-        branch: props.info.branch,
-        type : 'telegram'
+        id : props.info.id,
+        branch: props.info.branch
     }
- console.log(JSON.stringify(result));
+ console.log('https://t.me/Githubell_bot?start='+result.id);
+ 
 function main(e) {
   // Here, we invoke the callback with the new value
   props.onChange(1);
@@ -21,10 +21,10 @@ function prev(e) {
       return(
       <><div className='card-branch'>
       <h3>아래 QR코드를 텔레그램 깃허벨 챗에게 전달하세요</h3>
-      
+     
       </div>
        <div className='view'>
-         <QRcodeRender url={JSON.stringify(result)}/>
+         <QRcodeRender url={'https://t.me/Githubell_bot?start='+result.id}/>
        
        
      
