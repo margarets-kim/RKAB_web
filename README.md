@@ -1,5 +1,13 @@
 # Githubell Web Front-End Readme
 
+깃허벨 메인 페이지(Front End) 프로젝트 입니다
+
+깃허벨 텔레그램 레포지토리 주소\
+https://github.com/margarets-kim/telegram_githubell
+
+깃허벨 Github api 통신 및 Kakao Chat Bot 통신 서버 레포지토리 주소\\
+https://github.com/margarets-kim/RepoKaKaoAlarmBot
+
 해당 프로젝트는 [Create React App](https://github.com/facebook/create-react-app)를 기반으로 생성되었습니다.
 
 **기본 설치 요구 파일**
@@ -42,6 +50,59 @@
 **주의!: 해당 작업은 한번 `거절`하면 돌아갈 수 없어요!**
 
 빌드 도구 및 구성 선택에 만족하지 않으면 언제든지 `거절``할 수 있습니다. 이 커맨드는 프로젝트에서 단일 빌드를 제거할 것입니다.
+
+## 프로젝트 구조
+
+```
+.
+├── README.md
+├── package-lock.json
+├── package.json
+├── public
+├── src
+│   ├── App.css
+│   ├── App.js #root 컴포넌트
+│   ├── App.test.js
+│   ├── QRcodeRender.css
+│   ├── QRcodeRender.js #QR코드 생성
+│   ├── Telegram #텔레그램 섹션
+│   │   ├── T_intro.js
+│   │   ├── T_qrcode.js
+│   │   ├── T_register.js
+│   │   ├── T_result.js
+│   │   ├── Telegram.css
+│   │   └── Telegram.js
+│   ├── card #카카오톡 섹션
+│   │   ├── Card.css
+│   │   ├── Card.js
+│   │   ├── Card_intro.js
+│   │   ├── Card_qrcode.js
+│   │   ├── Card_register.js
+│   │   └── Card_result.js
+│   ├── font #페이지 폰트
+│   │   ├── AppleSDGothicNeoB.ttf
+│   │   ├── AppleSDGothicNeoEB.ttf
+│   │   ├── AppleSDGothicNeoH.ttf
+│   │   ├── AppleSDGothicNeoL.ttf
+│   │   └── AppleSDGothicNeoM.ttf
+│   ├── image #사이트에 사용될 QR코드, 로고 이미지
+│   │   ├── QRcode_channel.png
+│   │   ├── QRcode_channel_2.png
+│   │   ├── githubell_logo.png
+│   │   ├── kakao_logo.jpg
+│   │   ├── kakao_logo.png
+│   │   ├── logo_design.jpg
+│   │   ├── qrcode_telegram.png
+│   │   └── telegram_logo.png
+│   ├── index.css
+│   ├── index.js
+│   ├── logo.svg
+│   ├── reportWebVitals.js
+│   ├── setupProxy.js
+│   ├── setupTests.js
+│   └── style.css
+└── yarn.lock
+```
 
 ## 사이트 소개
 
