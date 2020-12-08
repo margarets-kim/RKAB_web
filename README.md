@@ -42,3 +42,26 @@
 **주의!: 해당 작업은 한번 `거절`하면 돌아갈 수 없어요!**
 
 빌드 도구 및 구성 선택에 만족하지 않으면 언제든지 `거절``할 수 있습니다. 이 커맨드는 프로젝트에서 단일 빌드를 제거할 것입니다.
+
+## 사이트 소개
+
+### 메인 화면
+
+![첫번째 사진](./markdown_img/web-main.png)
+
+### 카카오톡 QR코드 데이터 생성 섹션
+
+![카카오](./markdown_img/web_k_0.png)
+![카카오](./markdown_img/web_k_1.png)
+
+![카카오](./markdown_img/web_k_2_error.png)
+올바른 주소 URL형식만 입력받을 수 있습니다
+
+![카카오](./markdown_img/web_k_3.png)
+![카카오](./markdown_img/web_k_4.png)
+
+### 텔레그램 QR코드 데이터 생성 섹션
+
+![텔레그램](./markdown_img/web_t_1.png)
+![텔레그램](./markdown_img/web_t_3.png)
+올바른 주소 URL형식만 입력받을 수 있습니다
