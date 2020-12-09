@@ -8,7 +8,7 @@ https://github.com/margarets-kim/telegram_githubell
 깃허벨 Github api 통신 및 Kakao Chat Bot 통신 서버 레포지토리 주소\
 https://github.com/margarets-kim/RepoKaKaoAlarmBot
 
-해당 프로젝트는 [Create React App](https://github.com/facebook/create-react-app)를 기반으로 생성되었습니다.
+해당 프로젝트는 [Create React App](https://github.com/facebook/create-react-app)를 기반으로 생성되었습니다!
 
 **기본 설치 요구 파일**
 
