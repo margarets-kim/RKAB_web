@@ -1,6 +1,6 @@
 # Githubell Web Front-End Readme
 
-깃허벨 메인 페이지(Front End) 프로젝트 입니다
+깃허벨 메인 페이지(Front End) 프로젝트 입니다!
 
 깃허벨 텔레그램 레포지토리 주소\
 https://github.com/margarets-kim/telegram_githubell
